@@ -40,9 +40,9 @@ INSTALLED_APPS = [
     'record_game.apps.RecordGameConfig',
     'home.apps.HomeConfig', #Home
     'league.apps.LeagueConfig',
-    'team.apps.TeamCOnfig',
+    'team.apps.TeamConfig',
     'player.apps.PlayerConfig',
-    'game.apps.PlayerConfig',
+    'game.apps.GameConfig',
 ]
 
 MIDDLEWARE = [
