@@ -7,5 +7,8 @@ from league.models import League
 
 # Create your views here.
 def index(request):
-    context = {}
-    return render(request, 'home/index.html')
+    league_list = League.objects.order_by('league_name')
+    context = {
+        'league_list': league_list,
+    }
+    return render(request, 'home/index.html', context)

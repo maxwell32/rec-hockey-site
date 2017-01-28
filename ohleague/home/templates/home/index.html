@@ -2,6 +2,14 @@
     <head>
     </head>
     <body>
-        <p>You are home</p>
+        {% if league_list %}
+            <ul>
+            {% for league in league_list %}
+                <li><a href="#">{{league.league_name}}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>ERROR: No leagues available</p>
+        {% endif %}
     </body>
 </html>
