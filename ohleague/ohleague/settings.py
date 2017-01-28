@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'game_recap.apps.GameRecapConfig',
     'record_game.apps.RecordGameConfig',
+    'home.apps.HomeConfig', #Home
 ]
 
 MIDDLEWARE = [
