@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'record_game.apps.RecordGameConfig',
-    'home.apps.HomeConfig', #Home
+    'home.apps.HomeConfig',
     'league.apps.LeagueConfig',
     'team.apps.TeamConfig',
     'player.apps.PlayerConfig',
