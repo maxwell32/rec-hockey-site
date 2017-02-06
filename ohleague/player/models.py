@@ -12,3 +12,6 @@ class Player(models.Model):
     g = models.IntegerField(default=0)
     a = models.IntegerField(default=0)
     jersey_number = models.IntegerField(default=-1)
+
+    def __str__(self):
+        return self.last_name + ", " + self.first_name
