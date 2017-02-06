@@ -1,16 +1,42 @@
 {% load static %}
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ACAHL - Home</title><!-- should be a variable -->
+        <!-- Stylesheets -->
+        <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+        <link href="{% static "home/style.css" %}" rel="stylesheet">
+        <!-- JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
     </head>
     <body>
-        {% if league_list %}
-            <ul>
-            {% for league in league_list %}
-                <li><a href="#">{{league.league_name}}</a></li>
-            {% endfor %}
-            </ul>
-        {% else %}
-            <p>ERROR: No leagues available</p>
-        {% endif %}
+        <!-- main container -->
+        <div class="container">
+            <h1>Select a League</h1>
+            <!-- List of league links -->
+            <div class="list-group">
+            {% if league_list %}
+                {% for league in league_list %}
+                    <a href="#" class="list-group-item list-group-item-action">{{league.league_name}} League</a>
+                {% endfor %}
+            {% else %}
+                <p>ERROR: No leagues available</p>
+            {% endif %}
+            </div>
+        </div>
     </body>
 </html>
+<!-- jQuery -->
+<script>
+    //handle link hover bootstrap classes
+    $("a").hover(
+        function(){
+            $(this).addClass("active");
+        }, function(){
+            $(this).removeClass("active");
+        }
+    );
+</script>
