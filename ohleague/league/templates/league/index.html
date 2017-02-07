@@ -13,6 +13,7 @@
         <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
     </head>
     <body>
+    <div class="container">
         <table>
             <tr>
                 <th>Name</th>
@@ -27,5 +28,21 @@
             </tr>
             {% endfor %}
         </table>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>GP</th>
+                <th>A</th>
+            </tr>
+            {% for player in assist_list %}
+            <tr>
+                <td>{{player.first_name}} {{player.last_name}}</td>
+                <td>{{player.gp}}</td>
+                <td>{{player.a}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
     </body>
 </html>
