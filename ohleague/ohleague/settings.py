@@ -127,4 +127,5 @@ STATIC_URL = '/assets/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "common-assets"),
     os.path.join(BASE_DIR, "home/assets"),
+    os.path.join(BASE_DIR, "league/assets"),
 ]

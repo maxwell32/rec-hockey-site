@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title><!-- should be a variable -->
+        <!-- Stylesheets -->
+        <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+        <link href="{% static "league/style.css" %}" rel="stylesheet">
+        <!-- JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>GP</th>
+                <th>G</th>
+            </tr>
+            {% for player in goal_list %}
+            <tr>
+                <td>{{player.first_name}} {{player.last_name}}</td>
+                <td>{{player.gp}}</td>
+                <td>{{player.g}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
